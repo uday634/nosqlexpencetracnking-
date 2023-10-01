@@ -4,7 +4,7 @@ const token = localStorage.getItem('token');
 console.log(token);
 
 axios
-  .get('http://localhost:3000/expence/allExpences', {
+  .get('http://54.198.128.52:3000/expence/allExpences', {
     headers: { Authorization: token },
   })
   .then(response => {

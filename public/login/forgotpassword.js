@@ -14,7 +14,7 @@ forgotemailbtn.addEventListener('click',  async ()=>{
     };
     console.log(obj)
     try {
-        const response = await axios.post(`http://localhost:3000/password/forgotpassword`, obj);
+        const response = await axios.post(`http://54.198.128.52:3000/password/forgotpassword`, obj);
         const data = response.data;
         console.log(data);
     } catch (err) {

@@ -16,7 +16,7 @@ submitbtn.addEventListener("click", async () => {
     };
     if (newpassword === conpassword) {
       let sendpassword = await axios.post(
-        "http://localhost:3000/password/newpassword",
+        "http://54.198.128.52:3000/password/newpassword",
         obj
       );
       console.log(sendpassword);

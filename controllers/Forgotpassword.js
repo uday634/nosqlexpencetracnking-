@@ -32,7 +32,7 @@ exports.forgotpasswordData = async (req, res, next) => {
       sendSmtpEmail.to = [{ email: email }];
       sendSmtpEmail.sender = { email: "your@email.com", name: "Your Name" };
       sendSmtpEmail.subject = "Password Recovery";
-      sendSmtpEmail.htmlContent = `<a href="http://localhost:3000/password/resetpassword/${forpasswordrequest.id} "> click here to reset password</a>`; // Replace with your email content
+      sendSmtpEmail.htmlContent = `<a href="http://54.198.128.52:3000/password/resetpassword/${forpasswordrequest.id} "> click here to reset password</a>`; // Replace with your email content
 
       // Send the email
       await transactionalEmailsApi.sendTransacEmail(sendSmtpEmail);

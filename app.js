@@ -27,7 +27,7 @@ const app = express();
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'),{flags : 'a'})
 
-app.use(cors());
+app.use(cors({ origin: true, credentials: true }));
 app.use(bodyParser.json());
 app.use(morgan('combined',{stream: accessLogStream}))
 app.use(helmet());
