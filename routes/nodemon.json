@@ -1,0 +1,10 @@
+{
+  "env": {
+    "TOKEN_SECRET": "secreatKey",
+    "RAZORPAY_KEY_ID": "rzp_test_17SkQsjtaxFPEY",
+    "RAZORPAY_KEY_SECRET": "jXOy4qAngHDL2v2iAZtjakJW",
+    "BUCKET_NAME": "udaysexpensetrackingapp",
+    "IAM_USER_KEY": "AKIA4YWHZRCRNQAO6D64",
+    "IAM_USER_SECRET": "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"
+  }
+}

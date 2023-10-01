@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../expence tracking front end"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "expence tracking front end"
+	}
+}

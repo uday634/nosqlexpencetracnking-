@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src *; style-src *; img-src *;">
+    <meta name="description" content="Enter your description here">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../style.css"> <!-- Make sure this path is correct -->
+    <title>Sing up</title>
+</head>
+<body>
+    <div class="container signin-container" id="">
+        <form>
+            <h3>Sign In</h3>
+            <!-- Name input -->
+            <div class="form-group">
+                <label for="signname">Name</label>
+                <input type="text" id="signname" class="form-control">
+            </div>
+
+            <!-- Email input -->
+            <div class="form-group">
+                <label for="signemail">Email</label>
+                <input type="email" id="signemail" class="form-control">
+            </div>
+
+            <!-- Password input -->
+            <div class="form-group">
+                <label for="signpassword">Password</label>
+                <input type="password" id="signpassword" class="form-control">
+            </div>
+            <div id="errormsg"></div>
+
+            <!-- Submit button -->
+            <button type="button" id="signin" class="btn btn-primary btn-block "><a href="../login/login.html">Sign In</a></button>
+            <br>
+            <p >If you already registered?  <a href="../login/login.html">click here</a></p>
+        </form>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="signin.js"></script>
+</body>
+</html>

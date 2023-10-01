@@ -1,0 +1,222 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.left-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the box height */
+  max-height: 100%; /* Limit the maximum height to 100% of the viewport height */
+}
+
+/* Custom CSS */
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.left-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+/* Add this CSS to your userInterface.css file or in a <style> tag in your HTML file */
+
+/* Style for the nav tag (navbar) */
+nav {
+  background-color: #007bff; /* Set the background color */
+  height: 60px;
+  color: #fff; /* Set the text color */
+  padding: 10px 0; /* Add padding for spacing */
+  text-align: center; /* Center-align the content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for a raised effect */
+  
+}
+
+/* Style for the button inside the nav (navbar button) */
+nav button {
+  background-color: transparent; /* Set the button background color to transparent */
+  color: #fff; /* Set the button text color */
+  border: 1px solid #fff; /* Add a border around the button */
+  padding: 10px 20px; /* Add padding to the button */
+  margin: 0 10px; /* Add margin to separate buttons */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 5px;
+  display: flex;
+  
+}
+
+/* Style the button on hover */
+nav button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the box height */
+  max-height: 100%; /* Limit the maximum height to 100% of the viewport height */
+}
+
+/* Style the input fields and labels */
+label {
+  font-weight: bold;
+}
+
+h2{
+  text-align: center;
+  text-decoration: underline;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+/* Style the add button */
+.addbtn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+}
+
+.addbtn:hover {
+  background-color: #0056b3;
+}
+
+/* Style the data container */
+.data {
+  margin-top: 20px;
+}
+
+/* Style the data list */
+/* Style the data list */
+.data li {
+  list-style: none;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between; /* Align content and buttons to the right */
+  align-items: center; /* Vertically align text and buttons */
+}
+
+/* Style the edit and delete buttons */
+.edit,
+.delete {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Add some margin to the delete button */
+.delete {
+  margin-left: 5px;
+}
+
+/* Hover effect for buttons */
+.edit:hover,
+.delete:hover {
+  background-color: #0056b3;
+}
+
+/* Style the edit and delete buttons */
+.edit,
+.delete {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Adjust margin and padding for edit and delete buttons */
+.edit {
+  margin-right: 5px;
+}
+
+.delete {
+  margin-left: 5px;
+}
+
+/* Add some hover effect to the data list items */
+.data li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Add this CSS to your userInterface.css file or in a <style> tag in your HTML file */
+
+.leaderbord {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the box height */
+  max-height: 100%; /* Limit the maximum height to 100% of the viewport height */
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+}
+
+/* Style the data list */
+/* Style the data list */
+.leaderbord li {
+  list-style: none;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between; /* Align content and buttons to the right */
+  align-items: center; /* Vertically align text and buttons */
+}
