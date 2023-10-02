@@ -1,4 +1,6 @@
 const Razorpay = require('razorpay');
+require('dotenv').config();
+
 const User = require('../models/User');
 const Order = require('../models/orders');
 const Expense = require('../models/Expense');
