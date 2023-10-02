@@ -24,7 +24,7 @@ logBtn.addEventListener('click', async () => {
             localStorage.setItem('token', data.token);
             console.log('Login successful');
             errmsg.textContent = "Logged in";
-            window.location.href = '../userinterface/userinterface.html';
+            window.location.href = '../userinterface/';
         } else {
             // Handle unsuccessful login
             console.log('Login failed');
