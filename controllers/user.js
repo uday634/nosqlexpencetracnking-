@@ -1,4 +1,4 @@
-const signData = require('../models/User')
+const UserData = require('../models/User')
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 
@@ -16,13 +16,13 @@ exports.signin = async (req, res, next) => {
 
         // Hash the password
         const hashedPassword = await bcrypt.hash(password, 10); // 10 is the salt rounds
-
-        await signData.create({
+        const userData = new UserData({
             name: name,
             email: email,
-            password: hashedPassword, // Store the hashed password in the database
-        });
-
+            password: hashedPassword
+        })
+        await userData.save()
+        console.log('user is registered')
         res.status(201).json({ message: 'User created successfully' });
     } catch (err) {
         console.error(err);
@@ -30,13 +30,12 @@ exports.signin = async (req, res, next) => {
     }
 };
 
-    // login logic
 // Login logic
 exports.login = async (req, res, next) => {
     try {
         const email = req.body.email;
         const password = req.body.password;
-        const user = await signData.findOne({ where: { email: email } });
+        const user = await UserData.findOne({ email: email});
 
         if (!user) {
             // User not found, send a 404 response

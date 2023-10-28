@@ -14,7 +14,7 @@ logBtn.addEventListener('click', async () => {
         password: password
     };
     try {
-        const response = await axios.post('http://54.198.128.52:3000/user/log-in', obj);
+        const response = await axios.post('http://localhost:3000/user/log-in', obj);
         const data = response.data;
         console.log(data);
         

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         removeing(deleteButton, li);
 
         try {
-            const result = await axios.post('http://54.198.128.52:3000/expence/addExpence', obj, { headers: { "Authorization": token } });
+            const result = await axios.post('http://localhost:3000/expence/addExpence', obj, { headers: { "Authorization": token } });
             console.log(result);
         } catch (err) {
             console.log(err);
@@ -60,9 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to retrieve and display expenses
     async function getExpenses() {
         try {
-            const response = await axios.get('http://54.198.128.52:3000/expence/getExpence', { headers: { "Authorization": token } });
+            const response = await axios.get('http://localhost:3000/expence/getExpence', { headers: { "Authorization": token } });
             totalExpenses = response.data;
             displayExpenses(currentPage);
+            console.log(response.data)
         } catch (err) {
             console.log(err);
         }
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
             li.appendChild(deleteButton);
 
             data.appendChild(li);
-            removeing(deleteButton, li, expense.id);
+            removeing(deleteButton, li, expense._id);
         });
 
         // Update pagination
@@ -121,7 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function removeing(deleteButton, li, id) {
         deleteButton.addEventListener('click', async (e) => {
             try {
-                await axios.delete(`http://54.198.128.52:3000/expence/deleteExpence/${id}`, { headers: { "Authorization": token } });
+                console.log(id)
+                await axios.delete(`http://localhost:3000/expence/deleteExpence/${id}`, { headers: { "Authorization": token } });
                 li.remove();
             } catch (err) {
                 console.log(err);

@@ -1,7 +1,7 @@
-const User = require('../models/User');
-const Expense = require('../models/Expense'); // Corrected the import name
-const sequelize = require('sequelize')
-const Sequelize = require('../util/sqlconfig')
+// const User = require('../models/User');
+// const Expense = require('../models/Expense'); // Corrected the import name
+// const sequelize = require('sequelize')
+// const Sequelize = require('../util/sqlconfig')
 
 
 exports.getUserLeaderBoard = async (req, res) => {

@@ -8,7 +8,7 @@ primumbtn.addEventListener("click", async (e) => {
   const token = localStorage.getItem("token");
 
   try {
-    let response = await axios.get("http://54.198.128.52:3000/premium/premium", {
+    let response = await axios.get("http://localhost:3000/premium/premium", {
       headers: { Authorization: token },
     });
     console.log(response);
@@ -18,7 +18,7 @@ primumbtn.addEventListener("click", async (e) => {
       order_id: response.data.order.id,
       handler: async function (response) {
         await axios.post(
-          "http://54.198.128.52:3000/premium/updatetransactionstatus",
+          "http://localhost:3000/premium/updatetransactionstatus",
           {
             order_id: options.order_id,
             payment_id: response.razorpay_payment_id,
@@ -53,7 +53,7 @@ primumbtn.addEventListener("click", async (e) => {
 function leaderbordreport(duration,btn){
   btn.addEventListener("click", async () => {
     try {
-      let result = await axios.get(`http://54.198.128.52:3000/premium/${duration}`, {
+      let result = await axios.get(`http://localhost:3000/premium/${duration}`, {
         headers: { Authorization: token },
       });
       console.log(result.data)
@@ -76,7 +76,7 @@ function leaderbordreport(duration,btn){
 function reportButton(duration,btn){
   btn.addEventListener("click", async () => {
     try {
-      let result = await axios.get(`http://54.198.128.52:3000/premium/${duration}`, {
+      let result = await axios.get(`http://localhost:3000/premium/${duration}`, {
         headers: { Authorization: token },
       });
       console.log(result.data)
@@ -153,7 +153,7 @@ function showPremiumUI() {
   reportButton(year,yearly)  
   report.addEventListener('click',async () => {
     try{
-      let reportdownload = await axios.get(`http://54.198.128.52:3000/expence/download`, {
+      let reportdownload = await axios.get(`http://localhost:3000/expence/download`, {
         headers: { Authorization: token },
       })
       

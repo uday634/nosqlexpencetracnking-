@@ -1,11 +1,11 @@
-var SibApiV3Sdk = require("sib-api-v3-sdk");
-const forgotPasswordRequest = require("../models/ForgotPasswordRequest");
-const User = require("../models/User");
-const bcrypt = require('bcrypt');
-const sequelize = require("../util/sqlconfig");
+// var SibApiV3Sdk = require("sib-api-v3-sdk");
+// const forgotPasswordRequest = require("../models/ForgotPasswordRequest");
+// const User = require("../models/User");
+// const bcrypt = require('bcrypt');
+// const sequelize = require("../util/sqlconfig");
 
-const apiKey =
-  "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";
+// const apiKey =
+//   "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";
 
 exports.forgotpasswordData = async (req, res, next) => {
   try {
@@ -32,7 +32,7 @@ exports.forgotpasswordData = async (req, res, next) => {
       sendSmtpEmail.to = [{ email: email }];
       sendSmtpEmail.sender = { email: "your@email.com", name: "Your Name" };
       sendSmtpEmail.subject = "Password Recovery";
-      sendSmtpEmail.htmlContent = `<a href="http://54.198.128.52:3000/password/resetpassword/${forpasswordrequest.id} "> click here to reset password</a>`; // Replace with your email content
+      sendSmtpEmail.htmlContent = `<a href="http://localhost:3000/password/resetpassword/${forpasswordrequest.id} "> click here to reset password</a>`; // Replace with your email content
 
       // Send the email
       await transactionalEmailsApi.sendTransacEmail(sendSmtpEmail);

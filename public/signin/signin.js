@@ -16,7 +16,7 @@ signBtn.addEventListener('click', async () => {
         password: password
     };
     try {
-        await axios.post('http://54.198.128.52:3000/user/sign-in', obj);
+        await axios.post('http://localhost:3000/user/sign-in', obj);
         console.log('Send successfully');
         window.location.href = '../login/login.html';
     } catch (err) {
